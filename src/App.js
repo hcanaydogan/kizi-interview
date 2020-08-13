@@ -28,8 +28,8 @@ class App extends React.Component {
       <div id="app" className={currentThemeClass}>
         <Header changeTheme={this.changeTheme} themes={this.themes} />
         <main>
-          Main
-        {/* <Banner /> */}
+          <Banner />
+          <div style={{width: "250px", height:"500px"}}>asdasdasd</div>
         </main>
         <Footer />
       </div>

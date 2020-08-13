@@ -101,8 +101,10 @@ header {
     }
     #user-menu{
         #login-btn{
-            width: 137px;
+            flex: 0 0 auto;
+            width: 120px;
             color: #fff;
+            margin-left: 0;
         }
         button, input{
             font-size: 18px;

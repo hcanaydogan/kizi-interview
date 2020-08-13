@@ -1,4 +1,5 @@
 import React from "react"
+import '../assets/css/banner.scss'
 
 class Banner extends React.Component {
     constructor(props) {
@@ -11,7 +12,14 @@ class Banner extends React.Component {
         }
     }
     componentDidMount(){
-        this.getBannerContent()
+        //this.getBannerContent()
+        // TODO remove and enable getbanner
+        this.setBannercontent({
+            "collection_title": "Racing Games",
+            "game_title": "City Car Stunt 2",
+            "image_url":"https://www.pcgamesn.com/wp-content/uploads/legacy/The_Best_Racing_Games_on_PC.JPG",
+            "text": "The adventure continues with City Car Stunt 2! Select your car, your car's skin and buckle up because these super sportscars are on fire! Use your arrow keys to ride around the city and perform extreme stunts before your time runs out to successfully finish the race. You can test your agility in these races solo or you can grab a friend to make it more challenging. You can also select the Free Driving option to practice your stunts before the race."
+          })
     }
 
     fetchFeaturedCollection(){
@@ -36,13 +44,18 @@ class Banner extends React.Component {
     render(){
         const {collectionTitle, gameTitle, imgUrl, desc} = this.state
         return (
-            <div>
-                <div>
+            <div id="banner">
+                <div id="banner-desc">
                     <div>{collectionTitle}</div>
                     <div>{gameTitle}</div>
                     <div>{desc}</div>
+                    <a href="#allgames">
+                        View All {collectionTitle}
+                        <i className="fa fa-angle-right"></i>
+                    </a>
                 </div>
-                <img src={imgUrl} alt={gameTitle} />
+                <div id="banner-img" style={{backgroundImage: `url(${imgUrl})`}}>
+                </div>
             </div>
         )
     }

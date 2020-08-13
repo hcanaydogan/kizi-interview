@@ -1,0 +1,41 @@
+@import './_global.scss';
+
+#banner {
+    display: flex;
+    flex-wrap: wrap;
+    #banner-desc{
+        padding: 20px;
+        @include theme-bg-color();
+        flex: 1 1 440px;
+        //height: 400px;
+        div{
+            margin-bottom: 20px;
+            &:nth-child(1){
+                font-size: 30px;
+                line-height: 35px;
+                font-weight: 700;
+            }
+            &:nth-child(2){
+                font-size:45px;
+                line-height:45px;
+                font-weight: 700;
+            }
+        }
+        a{
+            display: inline-block;
+            text-decoration: none;
+            border: 2px solid #fff;
+            border-radius: 20px;
+            padding: 5px;
+            &:hover{
+                color: #fff;
+            }
+        }
+    }
+    #banner-img{
+        flex: 2 1 660px;
+        min-height: 400px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
