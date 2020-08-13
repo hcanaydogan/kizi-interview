@@ -11,10 +11,10 @@ class Categories extends React.Component {
         const categories = this.props.categories || []
         console.log(categories)
         return (
-            <a href="#categories" className="d-none d-md-flex align-items-center h-100 categories">
+            <a href="#categories" id="categories" className="d-none d-md-flex align-items-center h-100">
                 <i className="fa fa-th-large"></i>
                 CATEGORIES
-                <i className="fa icon-angle"></i>
+                <i id="icon-angle" className="fa"></i>
                 <ul>
                     {categories.map(c => {
                         return (

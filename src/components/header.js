@@ -31,12 +31,12 @@ class Header extends React.Component{
         const { themes, changeTheme } = this.props
         return (
             <header className="d-flex">
-                <div className="logo-container">
+                <div id="logo-container">
                     <img src={logo} className="App-logo" alt="logo" />
                 </div>
                 <div className="d-flex justify-content-between align-items-center w-100 h-100">
                     <nav className="d-flex justify-content-between align-items-center h-100">
-                        <a href="#" className="d-flex align-items-center theme-list">
+                        <a href="#" id="theme-list" className="d-flex align-items-center">
                             <i className="fa fa-edit"></i>
                             THEME
                             <ul>
@@ -47,8 +47,8 @@ class Header extends React.Component{
                         </a>
                         <Categories categories={mock_categories/* categories */} />
                     </nav>
-                    <div className="user-menu d-flex align-items-center">
-                        <button className="tc-bg form-control login-btn"><i className="fa fa-user-o"></i>Login</button>
+                    <div id="user-menu" className="d-flex align-items-center">
+                        <button id="login-btn" className="tc-bg form-control"><i className="fa fa-user-o"></i>Login</button>
                         <div className="d-none d-md-block">
                             <div className="input-group">
                                 <input type="text" className="form-control" placeholder="SEARCH" />

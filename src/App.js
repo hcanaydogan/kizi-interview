@@ -1,6 +1,8 @@
 import React from 'react';
 import Banner from './components/banner'
 import Header from "./components/header"
+import Footer from "./components/footer"
+
 import './App.scss';
 
 class App extends React.Component {
@@ -29,6 +31,7 @@ class App extends React.Component {
           Main
         {/* <Banner /> */}
         </main>
+        <Footer />
       </div>
     );
   }
