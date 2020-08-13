@@ -3,7 +3,6 @@ import gameIcon from '../assets/game_icon.svg';
 class Categories extends React.Component {
     constructor(props) {
         super(props)
-
     }
     gotToUrl(url) {
         window.open(url)
@@ -15,8 +14,8 @@ class Categories extends React.Component {
             <a href="#categories" className="d-none d-md-flex align-items-center h-100 categories">
                 <i className="fa fa-th-large"></i>
                 CATEGORIES
-                <i className="fa fa-angle-down"></i>
-                <ul className="d-flex flex-wrap">
+                <i className="fa icon-angle"></i>
+                <ul>
                     {categories.map(c => {
                         return (
                             <li className="d-flex align-items-center" key={c.position} onClick={() => this.gotToUrl(c.url)}>
