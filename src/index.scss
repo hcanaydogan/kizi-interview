@@ -1,0 +1,91 @@
+@import 'bootstrap/scss/bootstrap.scss';
+@import 'font-awesome/scss/font-awesome.scss';
+
+//main bg color
+$darkgray: #3F3F3F;
+
+// colors for themes
+$orange: rgb(251, 169, 10);
+$blue: rgb(0, 139, 243);
+$green: rgb(86, 173, 30);
+
+//themes list
+$themes: (
+  theme-orange: (color: $orange),
+  theme-blue: (color: $blue),
+  theme-green: (color: $green)
+);
+
+//mixin for creating themed color styles
+@mixin theme-bg-color{
+ @each $theme, $map in $themes{
+   .app.#{$theme} & {
+     background-color: map-get($map, color)
+   }
+ }
+}
+
+@mixin theme-color{
+  @each $theme, $map in $themes{
+    .app.#{$theme} & {
+      color: map-get($map, color)
+    }
+  }
+ }
+
+ @mixin theme-outline-color{
+  @each $theme, $map in $themes{
+    .app.#{$theme} & {
+      border-color: map-get($map, color);
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba(map-get($map, color), 0.2)
+    }
+  }
+ }
+//themed background
+.tc-bg {
+  @include theme-bg-color();
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans";
+  font-size: 16px;
+  background-color: $darkgray;
+  header {
+    background: linear-gradient(0deg, #5D5D5D, $darkgray);
+    box-shadow: 0px 1px 3px rgba(12,57,103,0.4);
+  }
+  *{
+    color: #ffffff;
+  }
+}
+
+i {
+  margin: 0 5px 0 5px;
+}
+
+button{
+  @extend .btn;
+  border-radius: 20px !important;
+  border: none !important;
+}
+
+input {
+  background-color: #737373 !important;
+  color: #fff !important;
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}
+
+@include placeholder {
+    color: #fff !important;
+}
+
+
+
