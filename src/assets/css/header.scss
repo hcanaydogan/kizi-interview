@@ -1,5 +1,5 @@
 
-@import 'src/index.scss';
+@import './_global.scss';
 
 header {
     height: 100px;
@@ -108,8 +108,13 @@ header {
             font-size: 18px;
             font-weight: 300;
             &:focus {
-                @include theme-outline-color();
+                @include theme-border-color();
+                @include theme-box-shadow-color();
+                outline: 0;
             }
+        }
+        button{
+            @include theme-bg-color();
         }
         .input-group{
             button{

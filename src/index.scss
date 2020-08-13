@@ -1,53 +1,8 @@
 @import 'bootstrap/scss/bootstrap.scss';
 @import 'font-awesome/scss/font-awesome.scss';
 @import 'typeface-oswald';
+@import './assets/css/_global';
 
-//main bg color
-$darkgray: rgb(63, 63, 63);
-$darkergray: #26282a;
-
-// colors for themes
-$orange: rgb(251, 169, 10);
-$blue: rgb(0, 139, 243);
-$green: rgb(86, 173, 30);
-
-//themes list
-$themes: (
-  theme-orange: (color: $orange),
-  theme-blue: (color: $blue),
-  theme-green: (color: $green)
-);
-
-//mixin for creating themed color styles
-@mixin theme-bg-color{
- @each $theme, $map in $themes{
-   .app.#{$theme} & {
-     background-color: map-get($map, color)
-   }
- }
-}
-
-@mixin theme-color{
-  @each $theme, $map in $themes{
-    .app.#{$theme} & {
-      color: map-get($map, color)
-    }
-  }
- }
-
- @mixin theme-outline-color{
-  @each $theme, $map in $themes{
-    .app.#{$theme} & {
-      border-color: map-get($map, color);
-      outline: 0;
-      box-shadow: 0 0 0 0.2rem rgba(map-get($map, color), 0.2)
-    }
-  }
- }
-//themed background
-.tc-bg {
-  @include theme-bg-color();
-}
 
 body {
   margin: 0;
@@ -72,13 +27,6 @@ button{
 input {
   background-color: #737373 !important;
   color: #fff !important;
-}
-
-@mixin placeholder {
-  ::-webkit-input-placeholder {@content}
-  :-moz-placeholder           {@content}
-  ::-moz-placeholder          {@content}
-  :-ms-input-placeholder      {@content}  
 }
 
 @include placeholder {

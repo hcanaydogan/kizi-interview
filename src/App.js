@@ -25,7 +25,7 @@ class App extends React.Component {
   render(){
     const { currentThemeClass } = this.state;
     return (
-      <div className={"app " + currentThemeClass}>
+      <div id="app" className={currentThemeClass}>
         <Header changeTheme={this.changeTheme} themes={this.themes} />
         <main>
           Main

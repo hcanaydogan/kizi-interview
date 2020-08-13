@@ -1,0 +1,55 @@
+//main bg color
+$darkgray: rgb(63, 63, 63);
+$darkergray: rgb(38, 40, 42);
+
+// colors for themes
+$orange: rgb(251, 169, 10);
+$blue: rgb(0, 139, 243);
+$green: rgb(86, 173, 30);
+
+//themes list
+$themes: (
+  theme-orange: (color: $orange),
+  theme-blue: (color: $blue),
+  theme-green: (color: $green)
+);
+
+//mixin for creating themed color styles
+@mixin theme-bg-color{
+ @each $theme, $map in $themes{
+   #app.#{$theme} & {
+     background-color: map-get($map, color)
+   }
+ }
+}
+
+@mixin theme-color{
+  @each $theme, $map in $themes{
+    #app.#{$theme} & {
+      color: map-get($map, color)
+    }
+  }
+ }
+
+ @mixin theme-border-color{
+  @each $theme, $map in $themes{
+    #app.#{$theme} & {
+      border-color: map-get($map, color);
+    }
+  }
+ }
+
+ @mixin theme-box-shadow-color{
+  @each $theme, $map in $themes{
+    #app.#{$theme} & {
+      box-shadow: 0 0 0 0.2rem rgba(map-get($map, color), 0.2)
+    }
+  }
+ }
+
+ @mixin placeholder {
+    ::-webkit-input-placeholder {@content}
+    :-moz-placeholder           {@content}
+    ::-moz-placeholder          {@content}
+    :-ms-input-placeholder      {@content}  
+}

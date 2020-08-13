@@ -1,0 +1,51 @@
+@import './_global.scss';
+
+footer {
+    position: absolute;
+    bottom: 0;
+    padding: 0 20px;
+    background-color: $darkergray;
+    width: 100%;
+    #footer-nav{
+        border-bottom: solid 1px #626262;
+        height: 60px;
+        #info-links{
+            a{
+                margin-right: 25px;
+            }
+        }
+        #social-links{
+            a{
+                border-width: 1px;
+                @include theme-border-color();
+                border-style: solid;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 5px;
+                text-decoration: none;
+                i{
+                    @include theme-color();
+                }
+            }
+        }
+    }
+    #footer-policy{
+        p {
+            font-weight: 300;
+            color: #8f8f8f;
+            &:first-child{
+                font-weight: 700;
+                color: #fff;
+                margin: 5px 0 0 0;
+                a {
+                    margin-right: 5px;
+                    @include theme-color();
+                }
+            }
+        }
+    }
+}
