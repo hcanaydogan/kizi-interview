@@ -3,6 +3,7 @@
 header {
     height: 100px;
     font-weight: 700;
+    position: relative;
     nav, .user-menu{
         &>*{
             margin: 0 15px 0 15px;
@@ -10,7 +11,6 @@ header {
     }
     nav{
         a{
-            position: relative;
             padding: 5px 11px 5px 0px;
             &:hover, &:focus, &:active{
                 text-decoration: none;
@@ -23,6 +23,7 @@ header {
                 margin: 0 10px 0 10px;
             }
             &.theme-list{
+                position: relative;
                 ul{
                     display: none;
                     list-style: none;
@@ -34,17 +35,8 @@ header {
                     width: 100%;
                     padding: 0;
                     margin: 0;
+                    z-index: 1;
                     border-radius: 0px 0px 5px 5px;
-                    // &:before{
-                    //     content: '';
-                    //     position: absolute;
-                    //     width: 15px;
-                    //     height: 15px;
-                    //     background-color: rgba(52,54,58,0.93);
-                    //     transform: translateY(-50%) rotate(45deg);
-                    //     left: 12px;
-                    //     top: 0;
-                    // }
                     li{
                         padding: 6px;
                         &:hover{
@@ -57,6 +49,35 @@ header {
                     border-radius: 5px 5px 0px 0px;
                     ul{
                         display: block;
+                    }
+                }
+            }
+            &.categories{
+                ul{
+                    list-style: none;
+                    position: absolute;
+                    background: rgba(52,54,58,0.93);
+                    transform: translateY(100%);
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    padding: 20px;
+                    margin: 0;
+                    li{
+                        padding: 10px 25px;
+                        width: 14%;
+                        white-space: nowrap;
+                        font-size: 15px;
+                        font-weight: 400;
+                        font-family: Oswald;
+                        &:hover{
+                            @include theme-color()
+                        }
+                        object{
+                            height: 25px;
+                            width: 25px;
+                            margin-right: 5px;
+                        }
                     }
                 }
             }
