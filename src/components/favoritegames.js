@@ -2,7 +2,10 @@
 import React from "react"
 import _ from 'lodash'
 import '../assets/css/favoritegames.scss'
-
+import gameIcon from '../assets/game_icon.svg';
+/**
+ * TODO slider functionality and fallback image of games
+ */
 class FavoriteGames extends React.Component {
     constructor(props) {
         super(props)
@@ -50,7 +53,7 @@ class FavoriteGames extends React.Component {
                 </div>
                 <div id="favorite-games-list" ref={elm => this.listNode = elm}>
                     {favoriteGames.map(g => {
-                        return <div key={g.title} style={{backgroundImage: `url(${g.image})`}} className="game-item" title={g.title}><span>{g.title}</span></div>
+                        return <div key={g.title} style={{backgroundImage: `url(${g.image}), url(${gameIcon})`}} className="game-item" title={g.title}><span>{g.title}</span></div>
                     })}
                 </div>
             </div>

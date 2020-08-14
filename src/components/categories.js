@@ -18,10 +18,10 @@ class Categories extends React.Component {
                     {categories.map(c => {
                         return (
                             <li className="d-flex align-items-center" key={c.position} onClick={() => this.gotToUrl(c.url)}>
-                                <object data={gameIcon} type="image/png">
-                                    <img src={c.icon} alt="Stack Overflow logo and icons and such" />
-                                </object>
-                                    {c.title.toUpperCase()}
+                                <img src={c.icon} alt={c.title} onError={(e) => {
+                                    e.target.src=gameIcon;
+                                }}/>
+                                {c.title.toUpperCase()}
                             </li>
                         )
                     })}
