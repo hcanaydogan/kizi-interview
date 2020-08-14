@@ -9,7 +9,6 @@ class Categories extends React.Component {
     }
     render() {
         const categories = this.props.categories || []
-        console.log(categories)
         return (
             <a href="#categories" id="categories" className="d-none d-md-flex align-items-center h-100">
                 <i className="fa fa-th-large"></i>

@@ -12,14 +12,7 @@ class Banner extends React.Component {
         }
     }
     componentDidMount(){
-        //this.getBannerContent()
-        // TODO remove and enable getbanner
-        this.setBannercontent({
-            "collection_title": "Racing Games",
-            "game_title": "City Car Stunt 2",
-            "image_url":"https://www.pcgamesn.com/wp-content/uploads/legacy/The_Best_Racing_Games_on_PC.JPG",
-            "text": "The adventure continues with City Car Stunt 2! Select your car, your car's skin and buckle up because these super sportscars are on fire! Use your arrow keys to ride around the city and perform extreme stunts before your time runs out to successfully finish the race. You can test your agility in these races solo or you can grab a friend to make it more challenging. You can also select the Free Driving option to practice your stunts before the race."
-          })
+        this.getBannerContent()
     }
 
     fetchFeaturedCollection(){
