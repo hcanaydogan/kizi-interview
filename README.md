@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-#Kizi Interview One page
+# Kizi Interview One page
 
 Projeyi çalıştırmak için node ve npm 'in yüklü olması gerekiyor.
 https://nodejs.org/en/download/
