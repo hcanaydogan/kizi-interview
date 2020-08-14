@@ -1,0 +1,62 @@
+@import './_global.scss';
+
+#favorite-games{
+    padding:20px;
+    #favorite-games-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        label{
+            font-size: 24px;
+            font-weight: 700;
+        }
+        #favorite-games-nav-btns{
+            display: flex;
+            &>div{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include theme-bg-color();
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+                &:first-child{
+                    border-radius: 50% 0 0 50%;
+                    // border-right: 1px solid #ededed;
+                    //@include theme-border-color()
+                }
+                &:last-child{
+                    border-radius: 0 50% 50% 0;
+                }
+                i{
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    #favorite-games-list{
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        // flex-wrap: wrap;
+        .game-item{
+            width: 312px;
+            flex: 0 0 auto;
+            margin-right: 15px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 210px;
+            font-size: 24px;
+            font-weight: 700;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding-left: 10px;
+            span {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from './components/banner'
 import Header from "./components/header"
 import Footer from "./components/footer"
+import FavoriteGames from "./components/favoritegames"
 
 import './App.scss';
 
@@ -29,7 +30,7 @@ class App extends React.Component {
         <Header changeTheme={this.changeTheme} themes={this.themes} />
         <main>
           <Banner />
-          <div style={{width: "250px", height:"500px"}}>asdasdasd</div>
+          <FavoriteGames />
         </main>
         <Footer />
       </div>
